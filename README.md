@@ -6,7 +6,7 @@
 ### Number of [titles] retiring
 Table: retiree_titles|   CSV: retiree_titles.csv
 
-![](images/ retiree_titles.png)
+![](images/retiree_titles.png)
 
 
 
@@ -29,7 +29,7 @@ A table containing employees who are eligible for the mentorship program You wil
 
 Table: mentorship_eligible   |   CSV: mentorship_eligible.csv
 
-![](images/ mentorship_eligible.png)
+![](images/mentorship_eligible.png)
 
 
 
