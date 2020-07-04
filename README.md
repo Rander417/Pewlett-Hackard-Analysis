@@ -4,7 +4,7 @@
 ## Technical Analysis Deliverable 1: Number of Retiring Employees by Title. 
 
 ### Number of [titles] retiring
-Table: retiree_titles|   CSV: retiree_titles.csv
+Table: retiree_titles   |   CSV: retiree_titles.csv
 
 ![](images/retiree_titles.png)
 
@@ -18,7 +18,7 @@ Table: retirement_eligible   |   CSV: retirement_eligible.csv
 ### List of current employees born between Jan. 1, 1952 and Dec. 31, 1955
 Table: empFrom_retirement_years   |   CSV: empFrom_retirement_years.csv
 
-![]( empFrom_retirement_years)
+![](images/empFrom_retirement_years.png)
 
 
 
