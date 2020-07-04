@@ -1,16 +1,54 @@
 # Pewlett-Hackard-Analysis
 
-## Technical Analysis Deliverable 1: 
-Number of Retiring Employees by Title. You will create three new tables, one showing number of [titles] retiring, one showing number of employees with each title, and one showing a list of current employees born between Jan. 1, 1952 and Dec. 31, 1955. New tables are exported as CSVs. 
+
+## Technical Analysis Deliverable 1: Number of Retiring Employees by Title. 
+
+### Number of [titles] retiring
+Table: retiree_titles|   CSV: retiree_titles.csv
+
+![](images/ retiree_titles.png)
 
 
 
-## Technical Analysis Deliverable 2: 
-Mentorship Eligibility. A table containing employees who are eligible for the mentorship program You will submit your table and the CSV containing the data (and the CSV containing the data)
+### Number of employees with each title
+Table: retirement_eligible   |   CSV: retirement_eligible.csv
+
+![](images/retirement_eligible.png)
+
+### List of current employees born between Jan. 1, 1952 and Dec. 31, 1955
+Table: empFrom_retirement_years   |   CSV: empFrom_retirement_years.csv
+
+![]( empFrom_retirement_years)
 
 
 
-## The technical report should consist of at least three paragraphs:
+
+
+## Technical Analysis Deliverable 2: Mentorship Eligibility. 
+A table containing employees who are eligible for the mentorship program You will submit your table and the CSV containing the data (and the CSV containing the data)
+
+Table: mentorship_eligible   |   CSV: mentorship_eligible.csv
+
+![](images/ mentorship_eligible.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Technical Report
 
 In your first paragraph, introduce the problem that you were using data to solve.
 
@@ -21,4 +59,4 @@ In your final paragraph, share the results of your analysis and discuss the data
 
 Be sure to include an image of the ERD you created when mapping out the database in your README.md.
 
-Remember that the ability to discuss your work effectively is what will set you apart as a data professional. 
+Remember that the ability to discuss your work effectively is what will set you apart as a data professional.

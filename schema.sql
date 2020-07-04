@@ -71,7 +71,6 @@ SELECT * FROM titles;
 
 -- Deliverable#1 --------------------------------------------------------------------------------------------------------------------------
 -- 	Section#1- Create a new table of eligible retirees currently working
-
 -- 	Filter the "employees" to only those eligible to retire and exported to a new table
 SELECT employees.first_name, employees.last_name
 INTO retirement_info
@@ -106,8 +105,7 @@ WHERE dept_emp.to_date = ('9999-01-01')
 
 ORDER BY retirement_info.emp_no;
 
---DROP TABLE IF EXISTS current_eligible_emp;
--- -------------------------------------------------------------
+----------------------------------------------------------------
 
 
 -- Deliverable#1 
@@ -119,8 +117,9 @@ SELECT * FROM current_eligible_emp;
 -- Deliverable#1 
 -- 	Section#3- A new table that includes only the most recent title of each employee. 
 -- 	Duplicates will be removed
+-- 2nd table needed for the the Technical Analysis Report
 SELECT	*
-INTO eligible_emp_noDups
+INTO retirement_eligible
 From (SELECT current_eligible_emp.emp_no,
 		current_eligible_emp.first_name,
 		current_eligible_emp.last_name,
@@ -132,12 +131,46 @@ From (SELECT current_eligible_emp.emp_no,
  		FROM current_eligible_emp
 	 	) tmp WHERE rn = 1
 
-ALTER TABLE eligible_emp_noDups
+ALTER TABLE retirement_eligible
 DROP COLUMN rn;
 
-SELECT * FROM eligible_emp_noDups;
+SELECT * FROM retirement_eligible;
+-------------------------------------------------------------------------
+
+-- 1st table needed for the the Technical Analysis Report
+
+
+
+-------------------------------------------------------------------------
+-- List of current employees born between Jan. 1, 1952 and Dec. 31, 1955
+-- 3rd table needed for the the Technical Analysis Report
+SELECT employees.first_name, employees.last_name
+INTO empFrom_retirement_years
+FROM employees
+LEFT JOIN dept_emp
+ON employees.emp_no = dept_emp.emp_no 
+WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+AND (dept_emp.to_date = ('9999-01-01'));
+
+-- 	Check the table
+SELECT * FROM empFrom_retirement_years;
+
+
 
 -- END DELIVERABLE #1 --------------------------------------------------------------------------------------------------------------------------  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 -- Deliverable 2 -------------------------------------------------------------------------------------------------------------------------------
