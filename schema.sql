@@ -136,11 +136,14 @@ DROP COLUMN rn;
 
 SELECT * FROM retirement_eligible;
 -------------------------------------------------------------------------
-
+-- Number of employees with each title
 -- 1st table needed for the the Technical Analysis Report
+SELECT retirement_eligible.title, COUNT(retirement_eligible.emp_no)
+INTO retiree_titles
+FROM retirement_eligible
+GROUP BY retirement_eligible.title
 
-
-
+SELECT * FROM retiree_titles;
 -------------------------------------------------------------------------
 -- List of current employees born between Jan. 1, 1952 and Dec. 31, 1955
 -- 3rd table needed for the the Technical Analysis Report
@@ -155,22 +158,7 @@ AND (dept_emp.to_date = ('9999-01-01'));
 -- 	Check the table
 SELECT * FROM empFrom_retirement_years;
 
-
-
 -- END DELIVERABLE #1 --------------------------------------------------------------------------------------------------------------------------  
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 -- Deliverable 2 -------------------------------------------------------------------------------------------------------------------------------

@@ -1,31 +1,49 @@
 # Pewlett-Hackard-Analysis
 
 
-## Technical Analysis Deliverable 1: Number of Retiring Employees by Title. 
+### Technical Report
 
-### Number of [titles] retiring
+Pewlett-Hackard is a large organization that has been in existing for a long time. They are currently anticipating a large number of retirements in-part because many of their employees are “baby-boomers”. An employee analysis is needed as packages will be offered to eligible staff. Secondly insight is needed into which positions and titles will be vacated so they can prepare to refill them. The specify questions driving the analysis are: Who will retire and how many positions will need to be filled.
+
+My approach to the analysis was to first get a raw list of employees that are retirement eligible. From this list a series of joins and further manipulation was performed to glean insight from the data. 
+For example using “count()” & “group by” to generate the number of titles eligible to retire reveals that most of the eligible positions are senior ones (80% are Senior Engineers & Senior Staff).
+
+The queries to determine mentorship eligibility reveal that a relatively small number of staff qualifies when compared to the number of retirees. 1,940 compared to 33,118 potential retirees.
+
+One challenge faced when building the ERD was determining which data sources did not need a primary key, for example the titles data set. Another challenge that arose was understanding how to remove the duplicate titles from tables since some employees have had multiple through their career.
+
+
+The largest limitation with the analysis is that it doesn't take into account employee desires. Just because an employee is eligible to retire does not mean they wish to. The same logic applies to the mentorship program, all eligible may not participate.
+Further research should be done on the staff that do not fit either retirement or mentorship criteria. This is a large group and will need attention for the company to succeed. 
+
+
+
+=====================================================================================================
+
+### Technical Analysis Deliverable 1: Number of Retiring Employees by Title. 
+
+#### Number of [titles] retiring
 Table: retiree_titles   |   CSV: retiree_titles.csv
 
 ![](images/retiree_titles.png)
 
 
 
-### Number of employees with each title
+#### Number of employees with each title
 Table: retirement_eligible   |   CSV: retirement_eligible.csv
 
 ![](images/retirement_eligible.png)
 
-### List of current employees born between Jan. 1, 1952 and Dec. 31, 1955
+
+#### List of current employees born between Jan. 1, 1952 and Dec. 31, 1955
 Table: empFrom_retirement_years   |   CSV: empFrom_retirement_years.csv
 
 ![](images/empFrom_retirement_years.png)
 
 
 
-
-
-## Technical Analysis Deliverable 2: Mentorship Eligibility. 
-A table containing employees who are eligible for the mentorship program You will submit your table and the CSV containing the data (and the CSV containing the data)
+### Technical Analysis Deliverable 2: Mentorship Eligibility. 
+A table containing employees who are eligible for the mentorship program
 
 Table: mentorship_eligible   |   CSV: mentorship_eligible.csv
 
@@ -33,6 +51,8 @@ Table: mentorship_eligible   |   CSV: mentorship_eligible.csv
 
 
 
+Entity Relationship Diagram (ERD)
+![](images/EmployeeDB_ERD.png)
 
 
 
@@ -46,17 +66,3 @@ Table: mentorship_eligible   |   CSV: mentorship_eligible.csv
 
 
 
-
-
-## Technical Report
-
-In your first paragraph, introduce the problem that you were using data to solve.
-
-In your second paragraph, summarize the steps that you took to solve the problem, as well as the challenges that you encountered along the way. This is an excellent spot to provide examples and descriptions of the code that you used.
-
-
-In your final paragraph, share the results of your analysis and discuss the data that you’ve generated. Have you identified any limitations to the analysis? What next steps would you recommend?
-
-Be sure to include an image of the ERD you created when mapping out the database in your README.md.
-
-Remember that the ability to discuss your work effectively is what will set you apart as a data professional.
